@@ -1,0 +1,605 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+    border: 1px solid #c7c7c3;
+}
+
+.header__bg {
+  position: relative;
+  width: 1440px;
+  margin: auto;
+  background: url("../img/main-bg.png") no-repeat;
+  height: 900px;
+  color: rgba(244, 244, 240, 1);
+}
+.header__bg a {
+  color: rgba(237, 237, 236, 1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px;
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.header__list {
+  display: flex;
+  gap: 70px;
+}
+
+.header__list-item {
+  font-size: 30px;
+}
+
+.header__btn {
+  padding: 7px 25px;
+  font-size: 30px;
+  line-height: 38px;
+  background-color: rgba(237, 237, 236, 1);
+  color: #000;
+  border-radius: 5px;
+  outline: 2px solid rgba(231, 227, 65, 1);
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  flex-direction: column;
+  font-family: "AmaticSC";
+  position: absolute;
+  font-weight: 700;
+  left: 35%;
+  top: 43%;
+}
+
+.hero__title {
+  font-size: 160px;
+  line-height: 201.76px;
+}
+
+.hero__subtitle {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 63.05px;
+}
+
+.garland {
+  width: 1440px;
+  margin: auto;
+  margin-top: -12px;
+}
+
+/* WHO WE */
+.who-we__title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  font-size: 128px;
+  font-weight: 700;
+  line-height: 161.41px;
+  color: rgba(19, 19, 19, 1);
+  z-index: 2;
+}
+
+.who-we__title::before {
+  content: "";
+  background: url("../img/title-bg.png") no-repeat;
+  width: 480px;
+  height: 190px;
+  position: absolute;
+  left: 38%;
+  z-index: -1;
+}
+
+.who-we__info-block {
+  display: flex;
+  align-items: flex-end;
+  gap: 35px;
+  margin-bottom: 61px;
+  font-family: "PoiretOne";
+}
+
+.who-we__img-container {
+  flex-shrink: 0;
+  font-family: "PoiretOne";
+  font-size: 50px;
+  line-height: 58.5px;
+}
+
+.who-we__img-container p {
+  position: absolute;
+}
+
+.who-we__info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 35px;
+  line-height: 40.95px;
+}
+
+.who-we__info p:first-child {
+  font-size: 50px;
+  line-height: 58.5px;
+}
+
+/* our-goals */
+.our-goals {
+  margin-bottom: 99px;
+}
+
+.our-goals img {
+  display: block;
+  margin: auto;
+}
+.our-goals__title {
+  position: relative;
+  text-align: center;
+  font-size: 128px;
+  font-weight: 700;
+  line-height: 161.41px;
+}
+
+.our-goals__title::before {
+  content: "";
+  background: url("../img/title-bg.png") no-repeat;
+  width: 480px;
+  height: 190px;
+  position: absolute;
+  left: 32.7%;
+  z-index: -1;
+}
+
+.our-goals__info-container {
+  display: flex;
+  gap: 20px;
+}
+.our-goals__content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 15px;
+  font-family: "PoiretOne";
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 40.95px;
+}
+
+/* offer */
+.offer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.offer__title {
+  position: relative;
+  margin: auto;
+  margin-bottom: 80px;
+  width: 50%;
+  font-size: 128px;
+  font-weight: 700;
+  line-height: 161.41px;
+  color: rgba(19, 19, 19, 1);
+  z-index: 2;
+}
+
+.offer__title::before {
+  content: "";
+  background: url("../img/title-bg-big.png") no-repeat;
+  width: 690px;
+  height: 270px;
+  position: absolute;
+  top: 14%;
+  left: -6%;
+  z-index: -1;
+}
+
+.offer__block-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 42px;
+}
+
+.offer__block {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  font-family: "PoiretOne";
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 40.95px;
+}
+
+.offer__btn-container {
+  position: relative;
+  margin-bottom: 140px;
+}
+
+.offer__btn-container img {
+  position: absolute;
+  right: -18px;
+  top: -12px;
+}
+
+.offer__btn {
+  padding: 10px 75px;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 90.79px;
+  margin-right: 120px;
+  border-radius: 5px;
+  outline: 2px solid rgba(19, 19, 19, 1);
+  background-color: rgba(252, 232, 177, 1);
+}
+
+.join-us {
+  margin-bottom: 60px;
+}
+
+.join-us p {
+  font-family: "PoiretOne";
+  text-align: center;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 40.95px;
+  margin-bottom: 7px;
+}
+.join-us__title {
+  position: relative;
+  text-align: center;
+  font-size: 128px;
+  font-weight: 700;
+  line-height: 161.41px;
+  margin-bottom: 85px;
+}
+
+.join-us__title::before {
+  content: "";
+  background: url("../img/title-bg-big.png") no-repeat;
+  width: 690px;
+  height: 270px;
+  position: absolute;
+  top: -21%;
+  left: 23%;
+  z-index: -1;
+}
+
+.join-us__btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.join-us__btn-container img {
+  width: fit-content;
+}
+
+.join-us__btn {
+  width: fit-content;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 90.79px;
+  padding: 10px 75px;
+  border-radius: 5px;
+  outline: 2px solid rgba(19, 19, 19, 1);
+  background-color: rgba(252, 232, 177, 1);
+}
+
+.reviews {
+  font-family: "Inter", serif;
+  margin-bottom: 80px;
+}
+
+.reviews__title {
+  font-family: "AmaticSC";
+  text-align: center;
+  font-size: 128px;
+  font-weight: 700;
+  line-height: 161.41px;
+  margin-bottom: 63px;
+}
+
+.reviews_content {
+  display: flex;
+  gap: 20px;
+}
+
+.reviews_content > div {
+  width: 50%;
+}
+
+.reviews__block {
+  padding: 81px 116px 78px;
+  background-color: rgba(237, 237, 236, 1);
+  color: rgba(237, 237, 236, 1);
+}
+
+.reviews__block-info {
+  padding: 7px 20px 30px 16px;
+  background-color: rgba(145, 140, 140, 1);
+}
+
+.reviews__text {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+}
+
+.reviews__time {
+  font-family: "AmaticSC";
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60.53px;
+  color: rgba(19, 19, 19, 1);
+  text-align: end;
+}
+
+.reviews__block-info-title {
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 49px;
+  letter-spacing: -0.02em;
+  margin-bottom: 30px;
+}
+
+.reviews__block-arrows {
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 1440px;
+  margin: auto;
+  padding: 0 35px;
+  height: 822px;
+  background: url("../img/footer-bg.png") no-repeat;
+  color: rgba(237, 237, 236, 1);
+  font-family: "PoiretOne";
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
+}
+
+.footer__title {
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 40.95px;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+.footer__contacts-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.4px;
+  letter-spacing: -0.02em;
+}
+
+.footer__contacts-content a {
+  color: rgba(237, 237, 236, 1);
+}
+
+.footer__work-time {
+  font-size: 20px;
+  line-height: 23.4px;
+  letter-spacing: -0.02em;
+}
+
+.footer__work-time span {
+  font-size: 35px;
+  line-height: 40.95px;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+  padding-bottom: 204px;
+}
+
+.footer__nav a {
+  font-family: "PoiretOne";
+  font-size: 35px;
+  line-height: 40.95px;
+  letter-spacing: -0.02em;
+  color: #ededec;
+}
+
+.footer__links-wrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.footer__copyright {
+  font-size: 16px;
+  line-height: 18.72px;
+}
+
+.blockquote {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 100px;
+}
+
+.blockquote__text {
+  font-family: "AmaticSC";
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 65px;
+  width: 680px;
+}
+
+.blockquote__text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.blockquote__author {
+  font-family: "AmaticSC";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50.44px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.modal {
+  /* display: none; Скрыто по умолчанию */
+  position: fixed; /* Остается на месте */
+  z-index: 10000; /* Сверху других элементов */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  background-color: rgb(0, 0, 0); /* Черный фон */
+  background-color: rgba(0, 0, 0, 0.4); /* Черный фон с прозрачностью */
+}
+
+.modal-content {
+  background-color: #f4f4f0;
+  margin: 15% auto; /* 15% сверху и центрирование */
+  padding: 20px;
+  width: 616px;
+  font-family: "PoiretOne";
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.modal-content-title {
+  font-family: "AmaticSC";
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 75.66px;
+  margin-bottom: 20px;
+  padding-top: 6px;
+  text-align: center;
+}
+
+.modal-content-close-container {
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+}
+
+.modal-content__form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-content__form {
+  display: flex;
+  flex-direction: column;
+  width: 443px;
+  gap: 15px;
+}
+
+.modal-content__form-input input {
+  margin-top: 5px;
+  padding: 15px 0 15px 10px;
+  border: 1px solid #c7c7c3;
+  width: 100%;
+}
+
+.modal-content__form-input label {
+  line-height: 19.6px;
+  letter-spacing: 0.02em;
+}
+
+.modal-content__form-input input::placeholder {
+  font-size: 16px;
+  line-height: 22.4px;
+  letter-spacing: 0.02em;
+}
+
+.modal-content__checkbox-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.modal-content__checkbox-container {
+  display: flex;
+  gap: 5px;
+}
+
+.modal-content__checkbox-container a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.modal-content__checkbox-container label {
+  display: block;
+}
+
+.modal-content__select p {
+  margin-bottom: 10px;
+}
+
+.modal-content__select-container {
+  display: flex;
+  gap: 114px;
+}
+
+.modal-content__choose {
+  text-align: center;
+  margin-bottom: 18px;
+  line-height: 19.6px;
+}
+
+.modal-content__btns-container {
+  display: flex;
+  gap: 20px;
+}
+
+.modal-content__btns-container > * {
+  width: 100%;
+}
+
+.modal-content__btn {
+  font-family: "AmaticSC";
+  padding: 10px 50px;
+  border: 2px solid #131313;
+  border-radius: 5px;
+  background-color: #fce8b1 !important;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 37px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
