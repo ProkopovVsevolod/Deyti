@@ -6,6 +6,7 @@
     <link href="./styles/reset.css" rel="stylesheet" />
     <link href="./styles/base.css" rel="stylesheet" />
     <link href="./styles/main.css" rel="stylesheet" />
+    <link href="./styles/mobile.css" rel="stylesheet" media="screen and (max-width: 480px)" />
     <title>Деяти</title>
   </head>
   <body id="body">
@@ -22,6 +23,7 @@
           <li class="header__list-item"><a href="#joinUs">Хочешь в команду ?</a></li>
           <li class="header__list-item"><a href="#reviews">Что о нас говорят ?</a></li>
         </ul>
+        <div id="openModalMobile">БУРГЕР</div>
         <button id="openModal" class="header__btn">Записаться</button>
       </header>
 
@@ -30,6 +32,7 @@
         <span class="hero__subtitle">мы выгуливаем грустных людей</span>
       </section>
     </div>
+
     <main>
       <div class="garland">
         <img src="./img/garland.png" alt="" />
@@ -151,7 +154,7 @@
           </div>
 
           <div class="offer__btn-container">
-            <button class="offer__btn">Записаться</button>
+            <button id="openModal" class="offer__btn">Записаться</button>
             <img src="./img/hand.png" alt="Рука" />
           </div>
         </section>
@@ -165,7 +168,7 @@
           </p>
           <div class="join-us__btn-container">
             <img src="./img/gooses.png" alt="Ребенок с утками" />
-            <button class="join-us__btn">Хочу в команду</button>
+            <button id="openModal" class="join-us__btn">Хочу в команду</button>
           </div>
           <img src="./img/garland-2.png" alt="Гирлянда" />
         </section>
@@ -195,8 +198,8 @@
         <div class="footer__contacts-content">
           <p class="footer__title">Контакты:</p>
           <p>Санкт-Петербург</p>
-          <a href="#">+7 (999) 669 92 84</a>
-          <a href="#">Deyati.spb@yandex.ru</a>
+          <a href="tel:+79996699284">+7 (999) 669 92 84</a>
+          <a href="mailto:Deyati.spb@yandex.ru">Deyati.spb@yandex.ru</a>
         </div>
 
         <p class="footer__work-time"><span>Время работы:</span> ежедневно</p>
@@ -217,7 +220,39 @@
           <li><a href="#reviews">Что о нас говорят ?</a></li>
         </ul>
       </div>
+
+      <p class="footer__name">Деяти</p>
+      <p class="footer__copyright-mobile">© Все права защищены</p>
     </footer>
+
+    <div id="modalMobile" class="modal-mobile">
+      <ul class="modal-mobile__list">
+        <li class="modal-mobile__list-item"><a href="#whoWe">Кто мы ?</a></li>
+        <li class="modal-mobile__list-item"><a href="#ourGoals">Наши цели ?</a></li>
+        <li class="modal-mobile__list-item"><a href="#offer">Что можем предложить ?</a></li>
+        <li class="modal-mobile__list-item"><a href="#joinUs">Хочешь в команду ?</a></li>
+        <li class="modal-mobile__list-item"><a href="#reviews">Что о нас говорят ?</a></li>
+      </ul>
+
+      <div class="modal-mobile__contacts">
+        <p>Контакты:</p>
+        <p>Санкт-Петербург</p>
+        <a href="tel:+79996699284">+7 (999) 669 92 84</a>
+        <a href="mailto:Deyati.spb@yandex.ru">Deyati.spb@yandex.ru</a>
+
+        <div class="modal-mobile__contacts-info">
+          <div>
+            <p>Время работы:</p>
+            <p>ежедневно</p>
+          </div>
+
+          <div>
+            <a href=""><img src="./img/icons/telegram.svg" alt="Деяти telegram" /></a>
+            <a href=""><img src="./img/icons/whatsapp.svg" alt="Деяти whatsapp" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="modal" class="modal">
         <div class="modal-content">
@@ -227,40 +262,39 @@
             <div class="modal-content__form-container">
                 <form class="modal-content__form" action="form">
                     <div class="modal-content__form-input">
-                        <label for="">имя *</label>
-                        <input type="text" placeholder="Введите имя">
+                        <label for="name">имя *</label>
+                        <input type="text" id="name" placeholder="Введите имя" required="required">
                     </div>
 
                    
                     <div class="modal-content__select">
-                        <p>выберите цель *</p>
-                        <div class="modal-content__select-container">
-                            <div class="modal-content__checkbox-container">
-                                <input type="checkbox" id="meet">
-                                <label for="meet">хочу встречу!</label>
-                            </div>
-                            <div class="modal-content__checkbox-container">
-                                <input type="checkbox" id="wantToTeam">
-                                <label for="wantToTeam">хочу в команду!</label>
-                            </div>
+                      <p>выберите цель *</p>
+                      <div class="modal-content__select-container">
+                        <div class="modal-content__checkbox-container">
+                            <input name="chooseCategory" type="checkbox" id="wantToMeet">
+                            <label for="wantToMeet">хочу встречу!</label>
                         </div>
-                        
+                        <div class="modal-content__checkbox-container">
+                          <input name="chooseCategory" type="checkbox" id="wantToTeam">
+                          <label for="wantToTeam">хочу в команду!</label>
+                        </div>
+                      </div>   
                     </div>
     
                     <div class="modal-content__form-input">
-                        <label for="">пожелания</label>
-                        <input type="text" placeholder="Внесите ваше желание">
+                      <label for="">пожелания</label>
+                      <input type="text" id="" placeholder="Внесите ваше желание">
                     </div>
 
                     <div class="modal-content__checkbox-wrapper" >
-                        <div class="modal-content__checkbox-container">
-                            <input type="checkbox" id="personalData">
-                            <label for="personalData">нажав на кнопку, я даю согласие на обработку своих персональных данных в соответствии с <a href="#">пользовательским соглашением</a></label>
-                        </div>
-                        <div class="modal-content__checkbox-container">
-                            <input type="checkbox" id="recall">
-                            <label for="recall">необходимо перезвонить</label>
-                        </div>
+                      <div class="modal-content__checkbox-container">
+                        <input type="checkbox" id="personalData" required="required">
+                        <label for="personalData">нажав на кнопку, я даю согласие на обработку своих персональных данных в соответствии с <a href="#">пользовательским соглашением</a> *</label>
+                      </div>
+                      <div class="modal-content__checkbox-container">
+                        <input type="checkbox" id="recall">
+                        <label for="recall">необходимо перезвонить</label>
+                      </div>
                     </div>
 
                     <p class="modal-content__choose">Выберите, куда отправить ваш запрос:</p>
