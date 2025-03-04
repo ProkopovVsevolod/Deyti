@@ -2,7 +2,7 @@
 const modal = document.getElementById("modal");
 const modalMobile = document.getElementById("modalMobile");
 const body = document.getElementById("body");
-const openModalBtn = document.getElementById("openModal");
+const openModalButtons = document.querySelectorAll('#openModal');
 const openModalMobileBtn = document.getElementById("openModalMobile");
 const closeModalBtn = document.getElementById("closeModal");
 
@@ -13,19 +13,26 @@ const CONFIG = {
 };
 
 // Когда пользователь нажимает на кнопку, открываем модальное окно
-openModalBtn.addEventListener("click", () => {
-    modal.style.display = "block";
-})
+openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        modal.style.display = 'block';
+    });
+});
 
-openModalMobileBtn.addEventListener("click", () => {
+const mobileModalHandler = () => {
     modalMobile.classList.toggle('active');;
 
     if (modalMobile.classList.contains('active')) {
         document.body.style.overflow = 'hidden';
+        openModalMobileBtn.classList.add("active")
+        
     } else {
         document.body.style.overflow = '';
+        openModalMobileBtn.classList.remove("active")
     }
-})
+}
+
+openModalMobileBtn.addEventListener("click", mobileModalHandler)
 
 // Когда пользователь нажимает на <span> (x), закрываем модальное окно
 closeModalBtn.addEventListener("click", () => {
@@ -74,6 +81,13 @@ function formatMessage(formData) {
         ${formData.recall ? 'Требуется перезвонить!' : ''}
     `;
 }
+
+document.querySelectorAll('.modal-mobile__list a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        // e.preventDefault(); // Предотвращаем стандартное поведение ссылки
+        mobileModalHandler(); // Вызываем функцию закрытия модального окна
+    });
+});
 
 document.querySelectorAll('input[name="chooseCategory"]').forEach(checkbox => {
     checkbox.addEventListener('change', function() {

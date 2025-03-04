@@ -18,11 +18,14 @@
     color: rgba(244, 244, 240, 1);
   }
   .header {
-    position: relative;
+    position: fixed;
     padding: 5px 20px;
     background-color: #131313;
     z-index: 9999;
     width: 100%;
+  }
+  .burger-icon {
+    display: block;
   }
 
   .header__list {
@@ -310,5 +313,121 @@
     position: absolute;
     bottom: 12px;
     left: 20px;
+  }
+
+  .modal {
+    width: 100vw; /* Полная ширина */
+    height: 100vh; /* Полная высота */
+    background-color: transparent;
+  }
+  
+  .modal-content {
+    background-color: #f4f4f0;
+    margin-top: 54px;
+    padding: 0px;
+    width: calc(100% + 20px) ;
+    height: calc(100vh + 54px) ;
+    font-family: "PoiretOne";
+    font-size: 14px;
+    line-height: 14px;
+  }
+  
+  .modal-content-title {
+    font-family: "AmaticSC";
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 75.66px;
+    margin-bottom: 20px;
+    padding-top: 6px;
+    text-align: center;
+  }
+  
+  .modal-content-close-container {
+    display: none;
+  }
+  
+  .modal-content__form-container {
+    padding: 0 20px;
+  }
+  
+  .modal-content__form {
+    display: flex;
+    flex-direction: column;
+    width: 443px;
+    gap: 15px;
+  }
+  
+  .modal-content__form-input input {
+    margin-top: 5px;
+    padding: 15px 0 15px 10px;
+    border: 1px solid #c7c7c3;
+    width: 100%;
+  }
+  
+  .modal-content__form-input label {
+    line-height: 19.6px;
+    letter-spacing: 0.02em;
+  }
+  
+  .modal-content__form-input input::placeholder {
+    font-size: 16px;
+    line-height: 22.4px;
+    letter-spacing: 0.02em;
+  }
+  
+  .modal-content__checkbox-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+  
+  .modal-content__checkbox-container {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .modal-content__checkbox-container a {
+    text-decoration: underline;
+    color: inherit;
+  }
+  
+  .modal-content__checkbox-container label {
+    display: block;
+  }
+  
+  .modal-content__select p {
+    margin-bottom: 10px;
+  }
+  
+  .modal-content__select-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .modal-content__choose {
+    text-align: center;
+    margin-bottom: 18px;
+    line-height: 19.6px;
+  }
+  
+  .modal-content__btns-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .modal-content__btns-container > * {
+    width: 100%;
+  }
+  
+  .modal-content__btn {
+    font-family: "AmaticSC";
+    padding: 10px 50px;
+    border: 2px solid #131313;
+    border-radius: 5px;
+    background-color: #fce8b1 !important;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 37px;
   }
 }

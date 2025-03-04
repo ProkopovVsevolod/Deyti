@@ -23,7 +23,11 @@
           <li class="header__list-item"><a href="#joinUs">Хочешь в команду ?</a></li>
           <li class="header__list-item"><a href="#reviews">Что о нас говорят ?</a></li>
         </ul>
-        <div id="openModalMobile">БУРГЕР</div>
+        <div class="burger-icon" id="openModalMobile">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
         <button id="openModal" class="header__btn">Записаться</button>
       </header>
 
@@ -180,7 +184,7 @@
             <div class="reviews__block">
               <div class="reviews__block-info">
                 <p class="reviews__block-info-title">Вася</p>
-                <p class="reviews__text">Время, проведенное в приятной компанииаомлоатомиосавслоябровсыьловряслсвал</p>
+                <p class="reviews__text">Время, проведенное в приятной компании и атмосфере</p>
                 <p class="reviews__time">06:23:47</p>
               </div>
               <div class="reviews__block-arrows">
@@ -227,11 +231,11 @@
 
     <div id="modalMobile" class="modal-mobile">
       <ul class="modal-mobile__list">
-        <li class="modal-mobile__list-item"><a href="#whoWe">Кто мы ?</a></li>
-        <li class="modal-mobile__list-item"><a href="#ourGoals">Наши цели ?</a></li>
-        <li class="modal-mobile__list-item"><a href="#offer">Что можем предложить ?</a></li>
-        <li class="modal-mobile__list-item"><a href="#joinUs">Хочешь в команду ?</a></li>
-        <li class="modal-mobile__list-item"><a href="#reviews">Что о нас говорят ?</a></li>
+        <li class="modal-mobile__list-item"><a href="#whoWe">Кто мы ?</a> <div class="modal-mobile__list-item-arrow"><img src="./img/icons/menu-arrow.svg"></div></li>
+        <li class="modal-mobile__list-item"><a href="#ourGoals">Наши цели ?</a><div class="modal-mobile__list-item-arrow"><img src="./img/icons/menu-arrow.svg"></div></li>
+        <li class="modal-mobile__list-item"><a href="#offer">Что можем предложить ?</a><div class="modal-mobile__list-item-arrow"><img src="./img/icons/menu-arrow.svg"></div></li>
+        <li class="modal-mobile__list-item"><a href="#joinUs">Хочешь в команду ?</a><div class="modal-mobile__list-item-arrow"><img src="./img/icons/menu-arrow.svg"></div></li>
+        <li class="modal-mobile__list-item"><a href="#reviews">Что о нас говорят ?</a><div class="modal-mobile__list-item-arrow"><img src="./img/icons/menu-arrow.svg"></div></li>
       </ul>
 
       <div class="modal-mobile__contacts">
@@ -246,7 +250,7 @@
             <p>ежедневно</p>
           </div>
 
-          <div>
+          <div class="modal-mobile__contacts-info-icons">
             <a href=""><img src="./img/icons/telegram.svg" alt="Деяти telegram" /></a>
             <a href=""><img src="./img/icons/whatsapp.svg" alt="Деяти whatsapp" /></a>
           </div>

@@ -2,6 +2,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 input[type="checkbox"] {
@@ -22,11 +23,40 @@ input[type="checkbox"] {
   color: rgba(237, 237, 236, 1);
 }
 
+.burger-icon {
+  display: none;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background: #EDEDEC;
+  margin-bottom: 8.5px;
+  transition: all 0.3s ease;
+}
+
+.burger-icon.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 7px);
+}
+
+.burger-icon.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-icon.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -7px);
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 35px;
+  width: 1440px;
 }
 
 .header__logo {
@@ -662,7 +692,7 @@ input[type="checkbox"] {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh + 54px) ;
   background-color: #232327;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
@@ -680,6 +710,15 @@ input[type="checkbox"] {
 
 .modal-mobile__list-item {
   padding: 15px 0 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-mobile__list-item-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-mobile__list-item:not(:last-child) {
@@ -719,5 +758,14 @@ input[type="checkbox"] {
 }
 
 .modal-mobile__contacts-info {
+  display: flex;
+  justify-content: space-between;
   margin-top: 20px;
+}
+
+.modal-mobile__contacts-info-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 5px;
 }
