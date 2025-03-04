@@ -524,7 +524,7 @@ input[type="checkbox"] {
 }
 
 .modal {
-  /* display: none; Скрыто по умолчанию */
+  display: none; /* Скрыто по умолчанию */
   position: fixed; /* Остается на месте */
   z-index: 10000; /* Сверху других элементов */
   left: 0;
