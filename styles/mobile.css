@@ -433,6 +433,9 @@
 
   .reviews__block-arrows {
     width: 362px;
-    left: 0;
+  }
+
+  .reviews__block-arrows > div {
+    width: 100px;
   }
 }

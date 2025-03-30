@@ -45,8 +45,6 @@ function createSliderHTML(containerId) {
     `;
 }
 
-// Функция для установки обработчиков событий
-
 // Функции для навигации
 function showPrevious() {
   sliderState.currentIndex = (sliderState.currentIndex - 1 + sliderState.reviews.length) % sliderState.reviews.length;
@@ -73,7 +71,6 @@ function updateDisplay() {
 // Инициализация слайдера
 function initializeSlider(containerId) {
   createSliderHTML(containerId);
-//   setupEventListeners();
   updateDisplay();
 }
 
