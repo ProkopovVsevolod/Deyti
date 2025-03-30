@@ -7,6 +7,7 @@
     <link href="./styles/base.css" rel="stylesheet" />
     <link href="./styles/main.css" rel="stylesheet" />
     <link href="./styles/mobile.css" rel="stylesheet" media="screen and (max-width: 480px)" />
+    <script src="https://unpkg.com/@green-api/whatsapp-api-client/lib/whatsapp-api-client.min.js"></script>
     <title>Деяти</title>
   </head>
   <body id="body">
@@ -182,14 +183,14 @@
           <div class="reviews_content">
             <img src="./img/review.png" alt="Ребёнок с телефоном" />
             <div class="reviews__block">
-              <div class="reviews__block-info">
-                <p class="reviews__block-info-title">Вася</p>
-                <p class="reviews__text">Время, проведенное в приятной компании и атмосфере</p>
-                <p class="reviews__time">06:23:47</p>
-              </div>
+              <div id="slider-container"></div>
               <div class="reviews__block-arrows">
-                <button>fghfg</button>
-                <button>fghfgh</button>
+                <div id="arrowBtnLeft">
+                  <img src="./img/arrow-left.png" alt="Стрелка влево">
+                </div>
+                <div id="arrowBtnRight">
+                  <img src="./img/arrow-right.png" alt="Стрелка в право">
+                </div>
               </div>
             </div>
           </div>
@@ -209,8 +210,8 @@
         <p class="footer__work-time"><span>Время работы:</span> ежедневно</p>
 
         <div class="footer__links-wrapper">
-          <a href=""><img src="./img/icons/telegram.svg" alt="Деяти telegram" /></a>
-          <a href=""><img src="./img/icons/whatsapp.svg" alt="Деяти whatsapp" /></a>
+          <a href="https://t.me/DeyatiBot" target="_blank"><img src="./img/icons/telegram.svg" alt="Деяти telegram" /></a>
+          <a href="https://wa.me/79996699284" target="_blank"><img src="./img/icons/whatsapp.svg" alt="Деяти whatsapp" /></a>
         </div>
 
         <p class="footer__copyright">© Все права защищены</p>
@@ -251,8 +252,8 @@
           </div>
 
           <div class="modal-mobile__contacts-info-icons">
-            <a href=""><img src="./img/icons/telegram.svg" alt="Деяти telegram" /></a>
-            <a href=""><img src="./img/icons/whatsapp.svg" alt="Деяти whatsapp" /></a>
+            <a href="https://t.me/DeyatiBot" target="_blank"><img src="./img/icons/telegram.svg" alt="Деяти telegram" /></a>
+            <a href="https://wa.me/79996699284" target="_blank"><img src="./img/icons/whatsapp.svg" alt="Деяти whatsapp" /></a>
           </div>
         </div>
       </div>
@@ -270,34 +271,53 @@
                         <input type="text" id="name" placeholder="Введите имя" required="required">
                     </div>
 
-                   
+                    <div class="modal-content__form-input">
+                      <label for="phone">номер телефона *</label>
+                      <input type="text" id="phone" placeholder="Введите номер телефона" required="required">
+                  </div>
+
                     <div class="modal-content__select">
                       <p>выберите цель *</p>
                       <div class="modal-content__select-container">
                         <div class="modal-content__checkbox-container">
+                          <label class="custom-checkbox">
                             <input name="chooseCategory" type="checkbox" id="wantToMeet">
-                            <label for="wantToMeet">хочу встречу!</label>
+                            <span class="checkmark"></span>
+                            хочу встречу!
+                          </label>
                         </div>
+                        
                         <div class="modal-content__checkbox-container">
-                          <input name="chooseCategory" type="checkbox" id="wantToTeam">
-                          <label for="wantToTeam">хочу в команду!</label>
-                        </div>
-                      </div>   
+                          <label class="custom-checkbox">
+                            <input name="chooseCategory" type="checkbox" id="wantToTeam">
+                            <span class="checkmark"></span>
+                            хочу в команду!
+                          </label>
+                        </div> 
                     </div>
     
                     <div class="modal-content__form-input">
-                      <label for="">пожелания</label>
-                      <input type="text" id="" placeholder="Внесите ваше желание">
+                      <label for="wishes">пожелания</label>
+                      <input type="text" id="wishes" placeholder="Внесите ваше желание">
                     </div>
 
                     <div class="modal-content__checkbox-wrapper" >
                       <div class="modal-content__checkbox-container">
-                        <input type="checkbox" id="personalData" required="required">
-                        <label for="personalData">нажав на кнопку, я даю согласие на обработку своих персональных данных в соответствии с <a href="#">пользовательским соглашением</a> *</label>
+                        <label class="custom-checkbox">
+                          <input type="checkbox" id="personalData" required="required">
+                          <span class="checkmark other-position" ></span>
+                          <p>
+                            нажав на кнопку, я даю согласие на обработку своих персональных данных в соответствии с <a href="#">пользовательским соглашением</a> *
+                          </p>
+                          
+                        </label>
                       </div>
                       <div class="modal-content__checkbox-container">
-                        <input type="checkbox" id="recall">
-                        <label for="recall">необходимо перезвонить</label>
+                        <label class="custom-checkbox">
+                          <input type="checkbox" id="recall">
+                          <span class="checkmark" ></span>
+                          необходимо перезвонить
+                        </label>
                       </div>
                     </div>
 
@@ -313,4 +333,6 @@
     </div>
   </body>
   <script src="./js/main.js"></script>
+  <script src="./js/sendApplication.js"></script>
+  <script src="./js/slider.js"></script>
 </html>

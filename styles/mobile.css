@@ -430,4 +430,9 @@
     font-weight: 700;
     line-height: 37px;
   }
+
+  .reviews__block-arrows {
+    width: 362px;
+    left: 0;
+  }
 }
