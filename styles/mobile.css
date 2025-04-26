@@ -10,6 +10,18 @@
     width: 402px;
   }
 
+  .header-mobile {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    padding: 5px 20px;
+    background-color: #131313;
+    z-index: 9999;
+    color: rgba(244, 244, 240, 1);
+  }
+
   .header__bg {
     position: relative;
     width: 402px;
@@ -18,6 +30,7 @@
     color: rgba(244, 244, 240, 1);
   }
   .header {
+    /* display: none; */
     position: fixed;
     padding: 5px 20px;
     background-color: #131313;
@@ -195,7 +208,7 @@
   }
 
   .offer__btn {
-    padding: 15px 86px;
+    padding: 15px 65px;
     font-size: 60px;
     line-height: 76px;
     margin-right: 0;
@@ -325,7 +338,8 @@
     background-color: #f4f4f0;
     margin-top: 54px;
     padding: 0px;
-    width: calc(100% + 20px) ;
+    /* width: calc(100% + 20px); */
+    width: 100%;
     height: calc(100vh + 54px) ;
     font-family: "PoiretOne";
     font-size: 14px;
@@ -353,7 +367,7 @@
   .modal-content__form {
     display: flex;
     flex-direction: column;
-    width: 443px;
+    width: 100%;
     gap: 15px;
   }
   
@@ -392,12 +406,9 @@
     color: inherit;
   }
   
-  .modal-content__checkbox-container label {
-    display: block;
-  }
-  
   .modal-content__select p {
     margin-bottom: 10px;
+    width: 100%;
   }
   
   .modal-content__select-container {
@@ -437,5 +448,42 @@
 
   .reviews__block-arrows > div {
     width: 100px;
+  }
+}
+
+@media (min-width: 360px) {
+  .garland {
+    width: 360px;
+    margin-top: -3px;
+  }
+
+  .container {
+    margin: auto auto;
+    padding: 0 20px;
+    width: 360px;
+  }
+
+  .header__bg {
+    width: 360px;
+  }
+  
+  .header {
+    width: 360px;
+  }
+
+  .footer {
+    width: 360px;
+  }
+
+  .reviews_content {
+    width: 360px;
+  }
+
+  .reviews__block-arrows {
+    width: 360px;
+  }
+
+  .blockquote__text {
+    width: 360px;
   }
 }
